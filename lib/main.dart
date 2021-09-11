@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:syntax_3/login.dart';
 
 void main() {
   runApp(MyApp());
@@ -69,13 +70,23 @@ class LoginPage extends StatelessWidget {
                     Container(
                       height: 80,
                       width: 80,
-                      child: Icon(
-                        Icons.arrow_forward_ios,
-                        color: Colors.white,
-                      ),
                       decoration: BoxDecoration(
                         color: Colors.pink[300],
                         borderRadius: BorderRadius.circular(50),
+                      ),
+                      child: IconButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Login(),
+                            ),
+                          );
+                        },
+                        icon: Icon(
+                          Icons.arrow_forward_ios,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                   ],
